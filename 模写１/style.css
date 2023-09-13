@@ -1,0 +1,160 @@
+
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #383e45;
+    font-size: 0.9rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+.site-title {
+    width: 120px;
+    line-height: 1px;
+    padding: 10px 0;
+}
+/* aタグのリンク範囲を親要素のサイズに広げます　*/
+.site-title a {
+    display: block;
+}
+
+/* h2タグ用　*/
+.section-title {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: solid 1px #383e45;
+}
+
+/* h3タグ用　*/
+.content-title {
+    font-size: 1rem;
+    margin: 10px 0;    
+}
+/* 画面の最大幅を指定。共通で使用します。*/
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto 100px auto;
+    padding: 0 4%;
+    text-align: center;
+}
+
+/* ヘッダー */
+#header {
+     /*h１とnavを横並びにします*/
+    display: flex;
+    /* 両橋に揃えます */
+    justify-content: space-between;
+    /* 高さを揃える */
+    align-items: center;
+    margin: 0% auto;
+}
+#header ul {
+display: flex;
+padding: 10px 0;
+}
+
+#header h1 {
+    /* margin-left: 20%; */
+    /* margin-top: 20px; */
+    /* background-color: black; */
+    color: rgb(255, 255, 255);
+}
+
+#header li {
+    margin-right: 50px;
+}
+#header li a {
+    color: #24292e;
+}
+#header li a :hover {
+    opacity: 0.7;
+    /* color: rgb(165, 15, 15); */
+}
+/* メインビジュアル */
+#mainvisual {
+    margin-bottom: 80px;
+}
+
+#mainvisual img {
+    width: 100%;
+    max-width: 1720px;
+    height: 600px;
+    object-fit: cover;/* 画面幅に合わせて伸縮する */
+}
+
+@media screen and (max-width: 600px){
+    #mainvisual img {
+        height: calc(100vh - 60px);/* 画像の高さをブラウザ一杯まで広げます*/
+    }
+    
+}
+
+/* アバウトセクション */
+#about .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+#about .text {
+    text-align: left
+    ;
+}
+
+@media screen and ( max-width: 600px){
+    #about .content {
+        flex-direction: column; /* 画像とテキストを縦並び */
+    }
+    #about img {
+        margin-right: 0 ;
+    }
+    
+}
+
+/* Bicycleセクション */
+#bicycle ul {
+    display: flex;
+    justify-content: space-between;
+}
+#bicycle li {
+    width: 32%;
+}
+
+
+@media screen and (max-width: 600px) {
+    #bicycle ul {
+        flex-direction: column;
+    }
+    #bicycle li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+}
+
+/* フッター */
+#footer {
+    font-size: 0.5rem;
+    padding: 10px 0;
+    text-align: center;
+}
